@@ -43,8 +43,7 @@ display(df_empresas)
 
 # COMMAND ----------
 
-query = """
-    """
+query="Select p.NOMBRE,p.salario,e.empresa_name as nombre_empresa from personas p inner join empresas e on p.id_empresa = e.id and p.periodo=e.periodo"
 df_result = spark.sql(query)
 
 # COMMAND ----------
