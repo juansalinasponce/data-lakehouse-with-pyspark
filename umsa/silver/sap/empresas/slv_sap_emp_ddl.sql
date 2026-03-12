@@ -1,0 +1,9 @@
+-- Databricks notebook source
+CREATE TABLE IF NOT EXISTS silver.empresa (
+    ID INT,
+    NOMBRE STRING,
+    FECHA_PROCESO DATE,
+    PERIODO STRING
+)
+USING DELTA
+PARTITIONED BY (PERIODO)
